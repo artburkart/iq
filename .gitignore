@@ -6,3 +6,6 @@ out
 *.iws
 .idea
 .gradle
+venv
+activate
+*.pyc

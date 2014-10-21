@@ -48,9 +48,6 @@ public class UniqCharsParameterizedTest {
                 {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.BIT, false},
                 {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.BOOL, false},
                 {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.SORTED, false},
-                {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.BIT, false},
-                {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.BOOL, false},
-                {"abcdefghijklmnopqrstuvwxyz{|}~_`abcdefghijklmnopqrstuvwxyz{|}~_`", UniqChars.SORTED, false},
                 // The BIT method cannot be used with these tests because the char values are out of range
                 {"!🛅", UniqChars.BOOL, true},
                 {"!🛅", UniqChars.SORTED, true},

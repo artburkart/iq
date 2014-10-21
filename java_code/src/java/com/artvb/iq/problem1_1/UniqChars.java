@@ -32,9 +32,9 @@ public class UniqChars {
     }
 
     /**
-     * Uses boolean BOOL to check for redundancy of chars in given String.
+     * Uses boolean mask to check for redundancy of chars in given String.
      *
-     * O(n) - Iterate through chars once to find duplicate.
+     * O(n) - Iterate through chars twice to find duplicate.
      *
      * @param str String to check for redundancy of chars
      * @return true if all chars unique, otherwise false
@@ -46,18 +46,18 @@ public class UniqChars {
         if (str.length() == 0) { return false; }
         if (str.length() == 1) { return true; }
 
-        // Find maximum char ordinal value for BOOL initialization
+        // Find maximum char ordinal value for mask initialization
         int max = Integer.MIN_VALUE;
         char[] chars = str.toCharArray();
         for (char c : chars) {
             max = (c > max) ? c : max;
         }
 
-        // Initialize BOOL with length of (max + 1)
-        boolean[] BOOL = new boolean[max + 1];
+        // Initialize mask with length of (max + 1)
+        boolean[] mask = new boolean[max + 1];
         for (char c : chars) {
-            if (BOOL[c]) { return false; }
-            BOOL[c] = true;
+            if (mask[c]) { return false; }
+            mask[c] = true;
         }
         return true;
     }
@@ -95,13 +95,13 @@ public class UniqChars {
             throw new IllegalArgumentException(err);
         }
 
-        int BOOL = 0;
+        int mask = 0;
         int marker, offset;
         for (char c: chars) {
             offset = c - min;
             marker = 1 << offset;
-            if ((marker & BOOL) > 0) { return false; }
-            BOOL |= marker;
+            if ((marker & mask) > 0) { return false; }
+            mask |= marker;
         }
         return true;
     }
