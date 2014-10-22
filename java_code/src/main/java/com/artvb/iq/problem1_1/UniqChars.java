@@ -91,7 +91,7 @@ public class UniqChars {
         // method will not work on the string
         if (max - min > Integer.SIZE - 1) {
             String err = String.format("Range between ordinal char values " +
-                "is larger than maximum (%d).", Integer.SIZE - 1);
+                    "is larger than maximum (%d).", Integer.SIZE - 1);
             throw new IllegalArgumentException(err);
         }
 

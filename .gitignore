@@ -9,3 +9,5 @@ out
 venv
 activate
 *.pyc
+project
+target
