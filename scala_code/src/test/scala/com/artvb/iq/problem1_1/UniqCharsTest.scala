@@ -1,16 +1,20 @@
 package com.artvb.iq.problem1_1
 
-import org.scalatest._
+import org.scalatest.{Matchers, FlatSpec}
 
 /**
  * Created by artburkart on 10/22/14.
  */
 class UniqCharsTest extends FlatSpec with Matchers {
-  "method1" should "return false" in {
-    UniqChars.method1("worldo") should be (false)
-    UniqChars.method1("") should be (false)
+  "Sort method" should "return false" in {
+    UniqChars.uniqChars("worldo", UniqChars.Sort) should be (Option(false))
+    UniqChars.uniqChars("", UniqChars.Sort) should be (Option(false))
   }
-  "method1" should "return true" in {
-    UniqChars.method1("world") should be (true)
+  "Sort method" should "return true" in {
+    UniqChars.uniqChars("world", UniqChars.Sort) should be (Option(true))
+    UniqChars.uniqChars("ab", UniqChars.Sort) should be (Option(true))
+  }
+  "Mask method" should "return true" in {
+    UniqChars.uniqChars("world", UniqChars.Set) should be (Option(true))
   }
 }
