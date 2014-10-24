@@ -71,6 +71,7 @@ object UniqChars {
     val maxChar = if (str.length() > 0)
       str.toList.maxBy(c => c.toInt).toInt
     else 0
+
     val minChar = if (str.length() > 0)
       str.toList.minBy(c => c.toInt).toInt
       else 0
