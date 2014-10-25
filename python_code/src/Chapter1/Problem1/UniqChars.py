@@ -1,5 +1,10 @@
 class UniqChars:
+    """Provides different algorithms for checking no redundancy
+    exists in a given String
+    """
     def __init__(self):
+        """Initializes the UniqChars class
+        """
         pass
 
     def __assert_not_none(self, obj, expected):

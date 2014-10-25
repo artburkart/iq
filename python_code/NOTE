@@ -8,4 +8,4 @@ Then install the dependencies
 4) `pip install -r requirements.txt`
 
 To run unit tests:
-5) fun `nosetests` from the python_code directory
+5) fun `nosetests` from the `python_code` directory
