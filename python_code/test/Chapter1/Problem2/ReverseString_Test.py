@@ -11,10 +11,9 @@ class ReverseString_Test(ParameterizedTestCase):
                  for _ in range(random.randint(0, 100)))
                  for _ in range(100))
 
-    @ParameterizedTestCase.parameterize(
-        ("string", "expected"), ((t, t[::-1]) for t in test_list))
-    def test_reverse_string_method(self, string, expected):
-        self.assertEqual(ReverseString.reverse_string(string), expected)
+    @ParameterizedTestCase.parameterize(("string",), ((t,) for t in test_list))
+    def test_reverse_string_method(self, string):
+        self.assertEqual(ReverseString.reverse_string(string), string[::-1])
 
     def test_reverse_string_on_empty(self):
         self.assertEqual(ReverseString.reverse_string(''), '')

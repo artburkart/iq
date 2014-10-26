@@ -6,7 +6,7 @@ import org.scalatest.{FlatSpec, Matchers}
 /**
  * Created by artburkart on 10/23/14.
  */
-class UniqCharsGeneratorDrivenTest extends FlatSpec with Matchers {
+class UniqCharsTableDrivenTest extends FlatSpec with Matchers {
   "UniqChars" should "match the expected values" in {
     val testStrings = Table(
       ("str", "method", "expected"),

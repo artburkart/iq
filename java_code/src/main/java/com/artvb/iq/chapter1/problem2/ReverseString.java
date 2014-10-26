@@ -10,6 +10,9 @@ public class ReverseString {
      * @return the given String reversed
      */
     public static String reverseString(String str) {
+        if (str == null) {
+            throw new NullPointerException();
+        }
         char[] chars = str.toCharArray();
         for (int i = 0; i < chars.length / 2; i++) {
             char temp = chars[i];

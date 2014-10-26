@@ -113,7 +113,7 @@ public class UniqChars {
      */
     private static void assertNotNull(Object o) {
         if (o == null) {
-            throw new NullPointerException("Given input must not be null");
+            throw new NullPointerException();
         }
     }
 
