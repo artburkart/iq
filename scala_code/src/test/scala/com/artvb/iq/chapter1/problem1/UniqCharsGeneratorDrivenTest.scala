@@ -1,4 +1,4 @@
-package com.artvb.iq.problem1_1
+package com.artvb.iq.chapter1.problem1
 
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}
@@ -6,7 +6,7 @@ import org.scalatest.{FlatSpec, Matchers}
 /**
  * Created by artburkart on 10/23/14.
  */
-class UniqCharsTableDrivenTest extends FlatSpec with Matchers {
+class UniqCharsGeneratorDrivenTest extends FlatSpec with Matchers {
   "UniqChars" should "match the expected values" in {
     val testStrings = Table(
       ("str", "method", "expected"),

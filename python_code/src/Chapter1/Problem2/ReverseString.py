@@ -14,7 +14,7 @@ class ReverseString:
         string = list(string)
         length = len(string)
         for i in range(0, length / 2):
-            end = len(string) - 1 - i
+            end = length - 1 - i
             temp = string[i]
             string[i] = string[end]
             string[end] = temp

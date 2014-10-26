@@ -1,4 +1,4 @@
-package com.artvb.iq.problem1_1;
+package com.artvb.iq.chapter1.problem1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -58,6 +58,6 @@ public class UniqCharsParameterizedTest {
 
     @Test
     public void testUniqCharsFunction() {
-        assertEquals(expected, UniqChars.uniqChars(str, method));
+        assertEquals(UniqChars.uniqChars(str, method), expected);
     }
 }

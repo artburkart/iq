@@ -1,4 +1,4 @@
-package com.artvb.iq.problem1_1
+package com.artvb.iq.chapter1.problem1
 
 import scala.collection.immutable.{HashMap, HashSet}
 
