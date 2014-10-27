@@ -17,3 +17,6 @@ class ReverseString_Test(ParameterizedTestCase):
 
     def test_reverse_string_on_empty(self):
         self.assertEqual(ReverseString.reverse_string(''), '')
+
+    def test_reverse_string_on_none_raises_error(self):
+        self.assertRaises(AttributeError, ReverseString.reverse_string, None)

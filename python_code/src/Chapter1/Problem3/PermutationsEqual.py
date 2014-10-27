@@ -4,6 +4,12 @@ class PermutationsEqual:
 
     @staticmethod
     def permutations_equal(str_a, str_b):
+        """Checks that two strings are permutations of each other
+
+        Keyword arguments:
+        str_a -- first input str
+        str_b -- second input str
+        """
         if str_a is None or str_b is None:
             raise AttributeError("inputs must be valid str")
         if len(str_a) != len(str_b):

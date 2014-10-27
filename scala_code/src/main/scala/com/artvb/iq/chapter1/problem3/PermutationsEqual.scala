@@ -6,6 +6,13 @@ import scala.collection.immutable.HashMap
  * Created by artburkart on 10/25/14.
  */
 object PermutationsEqual {
+  /** Checks if two Strings are permutations of each other
+    *
+    * @param strA first input String
+    * @param strB second input String
+    * @return true iff first String is permutation of second String,
+    *         otherwise false
+    */
   def permutationsEqual(strA: String, strB: String): Boolean = {
     @annotation.tailrec
     def createCharMap(l: List[Char], m: HashMap[Char, Int] = new HashMap[Char, Int](), n: Int): HashMap[Char, Int] = l match {

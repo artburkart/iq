@@ -51,6 +51,6 @@ public class ReverseStringParameterizedTest {
 
     @Test
     public void testReverseString() {
-        assertEquals(ReverseString.reverseString(str), expected);
+        assertEquals(expected, ReverseString.reverseString(str));
     }
 }

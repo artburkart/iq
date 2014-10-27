@@ -11,6 +11,9 @@ class ReverseString:
         Keyword arguments:
         string -- str to reverse
         """
+        if not isinstance(string, str):
+            raise AttributeError()
+
         string = list(string)
         length = len(string)
         for i in range(0, length / 2):
