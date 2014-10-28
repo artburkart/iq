@@ -11,6 +11,7 @@ object UrlSpaceEncoder {
     * @return returns String with spaces URL encoded
     */
   def urlSpaceEncoder(str: String, trueLength: Int): String = {
+    @annotation.tailrec
     def urlSpaceEncoder1(l: List[Char], acc: String = ""): String = l match {
       case (Nil) => acc
       case (h :: t) => if (h == ' ') urlSpaceEncoder1(t, acc + "%20") else urlSpaceEncoder1(t, acc + h)
