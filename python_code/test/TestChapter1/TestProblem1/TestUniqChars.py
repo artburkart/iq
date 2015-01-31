@@ -3,7 +3,7 @@ from Chapter1.Problem1.UniqChars import UniqChars
 from parameterizedtestcase import ParameterizedTestCase
 
 
-class UniqChars_Test(ParameterizedTestCase):
+class UniqCharsTest(ParameterizedTestCase):
     test_list = [
         ("", UniqChars.BIT, False),
         ("", UniqChars.BOOL, False),
@@ -44,11 +44,11 @@ class UniqChars_Test(ParameterizedTestCase):
         ("string", "method", "expected"),
         test_list
     )
-    def test_uniqChars_method(self, string, method, expected):
-        self.assertEqual(UniqChars.uniqChars(string, method), expected)
+    def test_uniq_chars_method(self, string, method, expected):
+        self.assertEqual(UniqChars.uniq_chars(string, method), expected)
 
     def test_invalid_method_raises_exception(self):
-        self.assertRaises(AttributeError, UniqChars.uniqChars, "ab", 0)
+        self.assertRaises(AttributeError, UniqChars.uniq_chars, "ab", 0)
 
     def test_none_method_raises_exception(self):
-        self.assertRaises(AttributeError, UniqChars.uniqChars, "ab", None)
+        self.assertRaises(AttributeError, UniqChars.uniq_chars, "ab", None)

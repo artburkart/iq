@@ -1,13 +1,20 @@
-.DS_Store
 build
+dist
+*egg-info
 out
+venv
+activate
+project
+target
+
+# By extension
+*.class
+*.pyc
 *.iml
 *.ipr
 *.iws
+
+# Hidden files and folders
 .idea
 .gradle
-venv
-activate
-*.pyc
-project
-target
+.DS_Store

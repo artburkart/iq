@@ -22,7 +22,7 @@ public class PermutationsEqual {
         }
 
         String curr;
-        HashMap<String, Integer> tracker = new HashMap();
+        HashMap<String, Integer> tracker = new HashMap<String, Integer>();
 
         // Add 1 for every character in strA
         for (char c : strA.toCharArray()) {
