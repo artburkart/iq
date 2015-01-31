@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import Counter
 
 
 class PermutationsEqual:
@@ -18,13 +18,7 @@ class PermutationsEqual:
         if len(str_a) != len(str_b):
             return False
 
-        tracker = defaultdict(int)
+        counter_a = Counter(str_a)
+        counter_b = Counter(str_b)
 
-        for s in str_a:
-            tracker[s] += 1
-        for s in str_b:
-            if tracker.get(s) is None or tracker.get(s) == 0:
-                return False
-            tracker[s] -= 1
-
-        return sum(tracker.values()) == 0
+        return (counter_a - counter_b) == (counter_b - counter_a)
