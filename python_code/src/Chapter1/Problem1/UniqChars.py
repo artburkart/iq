@@ -7,16 +7,17 @@ class UniqChars:
         """
         pass
 
-    def __assert_not_none(self, obj, expected):
+    def __assert_str_or_unicode(self, obj, expected):
         """Asserts an object not be None.
 
         Keyword arguments:
         obj -- the object to check for nullness
         expected -- the expected type of object
         """
-        if obj is None:
-            raise AttributeError(
-                "Given input, {}, must not be null".format(expected))
+        if not isinstance(obj, str) or isinstance(obj, unicode):
+            raise AttributeError("""\
+                Given input, {}, must be an instance of str or unicode
+                """.format(expected))
 
     def __method1(self, string):
         """Sorts string, then
@@ -27,15 +28,15 @@ class UniqChars:
         Keyword arguments:
         string -- str to check for redundancy of chars
         """
-        self.__assert_not_none(string, str)
+        self.__assert_str_or_unicode(string, str)
         if (len(string) == 0):
             return False
         if (len(string) == 1):
             return True
 
         sorted_string = sorted(string)
-        for i in range(len(sorted_string) - 1):
-            if sorted_string[i] == sorted_string[i + 1]:
+        for i, ch in enumerate(sorted_string[:-1]):
+            if ch == sorted_string[i + 1]:
                 return False
         return True
 
@@ -48,7 +49,7 @@ class UniqChars:
         Keyword arguments:
         string -- str to check for redundancy of chars
         """
-        self.__assert_not_none(string, str)
+        self.__assert_str_or_unicode(string, str)
         if (len(string) == 0):
             return False
         if (len(string) == 1):
@@ -71,7 +72,7 @@ class UniqChars:
         Keyword arguments:
         string -- str to check for redundancy of chars
         """
-        self.__assert_not_none(string, str)
+        self.__assert_str_or_unicode(string, str)
         if (len(string) == 0):
             return False
         if (len(string) == 1):
@@ -86,14 +87,16 @@ class UniqChars:
         return True
 
     @staticmethod
-    def uniqChars(string, method):
+    def uniq_chars(string, method):
         """Selects algorithm to determine redundancy of chars in given string
 
         Keyword arguments:
         string -- str to check for redundancy of chars
         method -- algorithm to use on string
         """
-        UniqChars.__assert_not_none(UniqChars(), method, int)
+        if not isinstance(method, int):
+            raise AttributeError(
+                "Given input, {}, must be an instance of int".format(method))
         selected = UniqChars.__METHODS.get(method)
         if not selected:
             raise AttributeError("Invalid method input: '{}'".format(method))

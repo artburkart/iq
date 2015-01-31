@@ -31,7 +31,7 @@ class UrlSpaceEncoder:
             if placeholder < 0:
                 break
             elif str_list[i] == ' ':
-                # This could be rewritten as
+                # NOTE(arthur): Wrote this with three lines for clarity:
                 # str_list[placeholder - 2: placeholder + 1] = ['%', '2', '0']
                 str_list[placeholder] = '0'
                 str_list[placeholder - 1] = '2'

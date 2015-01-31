@@ -26,7 +26,7 @@ object StringCompressor {
     def compress1(l: List[Char], n: Int = 0, acc: String = ""): String = l match {
       case (Nil) => acc
       case (h :: Nil) => acc + h + (n + 1)
-      case (h1 :: h2 :: t) => if (h1 == h2) compress1(h2 :: t, n + 1, acc) else compress1(h2 :: t, n - n, acc + h1 + (n + 1))
+      case (h1 :: h2 :: t) => if (h1 == h2) compress1(h2 :: t, n + 1, acc) else compress1(h2 :: t, 0, acc + h1 + (n + 1))
     }
     val compressed = compress1(str.toList)
     if (compressed.length() < str.length()) compressed else (str)

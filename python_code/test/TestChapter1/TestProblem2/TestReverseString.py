@@ -6,7 +6,7 @@ import random
 import string
 
 
-class ReverseString_Test(ParameterizedTestCase):
+class ReverseStringTest(ParameterizedTestCase):
     test_list = (''.join(random.choice(string.printable)
                  for _ in range(random.randint(0, 100)))
                  for _ in range(100))

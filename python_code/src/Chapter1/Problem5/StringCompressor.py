@@ -13,6 +13,7 @@ class StringCompressor:
         comp = ""
         count = 0
         for s in string:
+            # TODO(arthurb): add a short circuit for when comp is too long
             if s == curr:
                 count += 1
             else:
