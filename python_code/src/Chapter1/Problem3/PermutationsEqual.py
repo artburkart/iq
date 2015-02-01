@@ -18,7 +18,4 @@ class PermutationsEqual:
         if len(str_a) != len(str_b):
             return False
 
-        counter_a = Counter(str_a)
-        counter_b = Counter(str_b)
-
-        return (counter_a - counter_b) == (counter_b - counter_a)
+        return Counter(str_a) == Counter(str_b)
