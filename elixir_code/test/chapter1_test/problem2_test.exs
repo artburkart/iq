@@ -6,7 +6,7 @@ defmodule ElixirCode.Chapter1Test.Problem2Test do
 
   test_with_params "reverse_string",
     fn (str) ->
-      (Problem2.reverse_string str) === (String.reverse str)
+      assert (Problem2.reverse_string str) === (String.reverse str)
     end do
       printables = "0123456789abcdefghijklmnopqrstuvwx" <>
         "yzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&\\\'()*+,-." <>
