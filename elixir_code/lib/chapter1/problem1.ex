@@ -1,7 +1,7 @@
 defmodule ElixirCode.Chapter1.Problem1 do
   @moduledoc """
-    Implement an algorithm to determine if a string has all unique characters.
-    What if you can not use additional data structures?
+  Implement an algorithm to determine if a string has all unique characters.
+  What if you can not use additional data structures?
   """
   use Bitwise
 
@@ -52,7 +52,7 @@ defmodule ElixirCode.Chapter1.Problem1 do
     _boolmethod charlist, (for _ <-0..(Enum.max charlist), do: false)
   end
 
-  @spec _boolmethod(list, list) :: boolean
+  @spec _boolmethod([char], [boolean]) :: boolean
   defp _boolmethod([], _), do: true
   defp _boolmethod([h|t], mask) do
     cond do

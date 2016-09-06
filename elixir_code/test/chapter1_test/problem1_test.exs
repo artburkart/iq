@@ -4,9 +4,9 @@ defmodule ElixirCode.Chapter1Test.Problem1Test do
 
   alias ElixirCode.Chapter1.Problem1, as: Problem1
 
-  test_with_params "uniq_chars_test",
+  test_with_params "bitmethod, boolmethod, sortmethod",
     fn (str, method, expected) ->
-      assert apply(Problem1, method, [str]) == expected
+      assert (apply Problem1, method, [str]) == expected
     end do
       [
         {"", :bitmethod, false},
